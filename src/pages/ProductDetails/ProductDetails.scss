@@ -1,0 +1,31 @@
+.product-details {
+  padding-top: 20px;
+  position: relative;
+
+  @media screen and (min-width: 768px) {
+    padding-top: 60px;
+  }
+
+  &__make {
+    font-weight: normal;
+  }
+
+  &__model {
+    color: var(--primary-color);
+  }
+
+  &__rate {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: right;
+    margin-top: 16px;
+    width: calc(75% - 20px);
+
+    @media screen and (max-width: 767px) {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      margin: 0;
+    }
+  }
+}

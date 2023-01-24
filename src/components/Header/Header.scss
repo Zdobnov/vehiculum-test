@@ -1,0 +1,64 @@
+.header {
+  height: 64px;
+  border-bottom: 1px solid var(--separator);
+
+  &__wrapper {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+  }
+
+  &__back {
+    position: relative;
+    height: 100%;
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 0 60px;
+    text-decoration: none;
+
+    &:before {
+      content: "";
+      width: 0px;
+      height: 0px;
+      border-style: solid;
+      border-width: 12px 10px 12px 0;
+      border-color: transparent var(--primary-color) transparent transparent;
+      position: absolute;
+      left: 8px;
+      top: calc(50% - 12px);
+      transition: all .4s ease;
+    }
+
+    &:after {
+      content: "";
+      background: var(--primary-color);
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      z-index: -1;
+      transform: rotate(3deg);
+      transition: transform .4s ease;
+    }
+
+    &:hover {
+      &:before {
+        left: -8px;
+      }
+
+      &:after {
+        transform: rotate(0deg);
+      }
+    }
+  }
+
+  .logo {
+    height: 40px;
+    flex: 0 0 143px;
+  }
+}
